@@ -52,10 +52,10 @@ const DogApp = () => {
       </TouchableOpacity>
       {error && <Text>{error.message}</Text>}
       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-        <TouchableOpacity style={styles.button} onPress={openGallery}>
+        <TouchableOpacity style={styles.buttonsOptions} onPress={openGallery}>
           <Text style={styles.dogText}>Cargar PerroImagen 🐕 🦴</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={error}>
+        <TouchableOpacity style={styles.buttonsOptions} onPress={error}>
           <Text style={styles.dogText}>Eliminar Imagen 🐶</Text>  
         </TouchableOpacity>
       </View>
@@ -88,7 +88,16 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     alignItems: 'center',
     justifyContent: 'center',
+    marginBottom: 50,
+  },
+  buttonsOptions:{
+    backgroundColor: '#1badd8',
+    width: 120,
+    height: 90,
+    borderRadius: 4,
     marginBottom: 20,
+    alignItems: 'center',
+    margin: 30,
   },
   dogText: {
     color: '#fff',
